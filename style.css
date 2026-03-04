@@ -1,0 +1,315 @@
+:root {
+  --primary: #1e3a5f;
+  --primary-light: #2c5282;
+  --accent: #c9a84c;
+  --accent-light: #e2c97e;
+  --bg: #faf8f5;
+  --bg-card: #ffffff;
+  --text: #2d3748;
+  --text-light: #718096;
+  --border: #e2e8f0;
+  --input-bg: #edf2f7;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* Header */
+.site-header {
+  text-align: center;
+  padding: 2.5rem 1.5rem 2rem;
+  background: var(--primary);
+  color: white;
+}
+
+.site-header .church-name {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--accent-light);
+  margin-bottom: 0.25rem;
+}
+
+.site-header h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.85rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+}
+
+.site-header .subtitle {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-style: italic;
+}
+
+/* Container */
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.breadcrumb a {
+  color: var(--primary-light);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* Cards */
+.card {
+  background: var(--bg-card);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  padding: 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.card h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--primary);
+  font-size: 1.3rem;
+  margin-bottom: 0.35rem;
+}
+
+.card .card-desc {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.card-actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+/* Series intro */
+.series-intro {
+  font-style: italic;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  line-height: 1.8;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.15rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary-light);
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-accent:hover {
+  background: #b8993f;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--border);
+  color: var(--text);
+}
+
+.btn-outline:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Form page styles */
+.intro-text {
+  font-style: italic;
+  color: var(--text-light);
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.form-section {
+  margin-bottom: 2.5rem;
+}
+
+.form-section h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--primary);
+  font-size: 1.25rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.context {
+  margin-bottom: 1.25rem;
+  color: var(--text-light);
+}
+
+.question-group {
+  margin-bottom: 1.5rem;
+}
+
+.question-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  line-height: 1.65;
+}
+
+.question-group textarea {
+  width: 100%;
+  min-height: 110px;
+  padding: 0.7rem;
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  background: var(--input-bg);
+  color: var(--text);
+  resize: vertical;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.question-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  background: white;
+}
+
+.prayer-box {
+  background: var(--input-bg);
+  border-left: 4px solid var(--accent);
+  padding: 1.25rem 1.5rem;
+  font-style: italic;
+  border-radius: 0 6px 6px 0;
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.closing-text {
+  text-align: center;
+  color: var(--text-light);
+  font-style: italic;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.response-text {
+  white-space: pre-wrap;
+  padding: 0.7rem;
+  background: var(--input-bg);
+  border-radius: 6px;
+  min-height: 1.5rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--text-light);
+  font-size: 0.85rem;
+}
+
+/* Save indicator */
+.save-indicator {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  background: var(--primary);
+  color: white;
+  padding: 0.4rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.save-indicator.show {
+  opacity: 1;
+}
+
+/* Print styles */
+@media print {
+  body { background: white; }
+  .site-header { background: none; color: var(--text); padding: 1rem 0; border-bottom: 2px solid var(--primary); }
+  .site-header .church-name { color: var(--text-light); }
+  .site-header h1 { color: var(--primary); }
+  .site-header .subtitle { color: var(--text-light); }
+  .form-actions, .breadcrumb, .save-indicator { display: none !important; }
+  .question-group textarea { border: 1px solid #ccc; background: white; }
+  .card { box-shadow: none; border: 1px solid #ddd; }
+  .container { padding: 1rem 0; }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .site-header { padding: 2rem 1rem 1.5rem; }
+  .site-header h1 { font-size: 1.4rem; }
+  .container { padding: 1.25rem 1rem; }
+  .card { padding: 1.25rem; }
+  .card-actions { flex-direction: column; }
+  .btn { justify-content: center; }
+  .form-actions { flex-direction: column; }
+}
