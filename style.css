@@ -246,6 +246,17 @@ body {
     padding-top: 0;
 }
 
+.subsection-heading {
+    font-family: 'Arial', sans-serif;
+    font-size: 1em;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #8b7355;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
 .context {
     font-size: 1.2em;
     font-style: italic;
