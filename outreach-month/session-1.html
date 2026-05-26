@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outreach Month Training - Session 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: #fafafa;
+            color: #2c2c2c;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 40px 100px;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 0 60px;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 70px;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            font-weight: normal;
+            margin-bottom: 0.3em;
+            color: #1a1a1a;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.75em;
+            color: #666;
+        }
+
+        h2 {
+            font-size: 2.4em;
+            font-weight: normal;
+            margin: 70px 0 30px;
+            color: #333;
+            line-height: 1.3;
+            padding-top: 40px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        h3 {
+            font-size: 1.75em;
+            font-weight: normal;
+            margin: 50px 0 20px;
+            color: #444;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        p {
+            font-size: 1.44em;
+            line-height: 1.9;
+            margin-bottom: 1.3em;
+            color: #3a3a3a;
+        }
+
+        .scripture {
+            font-style: italic;
+            background: linear-gradient(135deg, #f5f5f5 0%, #ececec 100%);
+            padding: 35px 40px;
+            border-left: 4px solid #8b7355;
+            margin: 35px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .scripture p {
+            font-size: 1.375em;
+            line-height: 2;
+            margin-bottom: 1.1em;
+        }
+
+        .scripture p:last-child {
+            margin-bottom: 0;
+        }
+
+        .scripture-ref {
+            font-style: normal;
+            font-weight: bold;
+            color: #6b5344;
+            display: block;
+            margin-bottom: 12px;
+            font-size: 1.3em;
+        }
+
+        .verse-num {
+            font-weight: bold;
+            color: #8b7355;
+            font-style: normal;
+            margin-right: 3px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 30px 0;
+        }
+
+        ul li {
+            font-size: 1.44em;
+            line-height: 1.8;
+            margin-bottom: 0.9em;
+            padding-left: 28px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "\2022";
+            color: #8b7355;
+            font-size: 1.2em;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .section-label {
+            font-size: 1.19em;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #8b7355;
+            margin-bottom: 0.8em;
+        }
+
+        .ref-tag {
+            font-style: normal;
+            font-weight: bold;
+            color: #6b5344;
+            white-space: nowrap;
+        }
+
+        .ripe-fruit {
+            font-style: normal;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #8b7355;
+        }
+
+        .toc {
+            margin-bottom: 60px;
+        }
+
+        .toc h2 {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+
+        .toc ol {
+            padding-left: 24px;
+            margin: 20px 0;
+        }
+
+        .toc ol li {
+            font-size: 1.25em;
+            line-height: 1.7;
+            margin-bottom: 0.5em;
+            color: #3a3a3a;
+        }
+
+        .toc ol li a {
+            color: #6b5344;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .toc ol li a:hover {
+            color: #8b7355;
+            text-decoration: underline;
+        }
+
+        .anchor-scripture {
+            padding: 10px 0 40px;
+            margin-bottom: 60px;
+        }
+
+        .anchor-scripture .section-label {
+            text-align: center;
+        }
+
+        .highlight-text {
+            font-weight: bold;
+        }
+
+        .centered {
+            text-align: center;
+        }
+
+        .next-session {
+            text-align: center;
+            padding: 70px 0;
+            margin-top: 60px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .next-session p {
+            font-size: 1.625em;
+            color: #555;
+        }
+
+        .nav-links {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.9em;
+        }
+
+        .nav-links a {
+            color: #8b7355;
+            text-decoration: none;
+            padding: 10px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: background 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 0;
+        }
+
+        .nav-links a:hover {
+            background: #f5f5f5;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 24px 80px;
+            }
+
+            header {
+                padding: 50px 0 40px;
+                margin-bottom: 50px;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            h2 {
+                font-size: 1.9em;
+                margin: 50px 0 25px;
+                padding-top: 30px;
+            }
+
+            h3 {
+                margin: 40px 0 18px;
+            }
+
+            p, ul li {
+                font-size: 1.25em;
+            }
+
+            .scripture {
+                padding: 25px 20px;
+                margin: 25px 0;
+            }
+
+            .scripture p {
+                font-size: 1.15em;
+            }
+
+            .nav-links {
+                position: static;
+                text-align: center;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-links">
+        <a href="../" title="Resources Home"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></a>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Outreach Month Training</h1>
+            <p class="subtitle">Session 1: Personal Evangelism &mdash; Theology</p>
+        </header>
+
+        <p>This training session reviews, straight from the Scriptures, real examples of personal evangelism and applies them to our day. There are people in the Bible just like the people all around us &mdash; and the same God who reached them is ready to reach our generation through us.</p>
+
+        <nav class="toc">
+            <h2>Contents</h2>
+            <ol>
+                <li><a href="#purpose">Purpose</a></li>
+                <li><a href="#why-succeed">Why We Will Succeed</a></li>
+                <li><a href="#goal">Goal</a></li>
+                <li><a href="#examples">Scripture Examples</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
+            </ol>
+        </nav>
+
+        <div class="anchor-scripture">
+            <p class="section-label">Our Text</p>
+            <div class="scripture">
+                <span class="scripture-ref">John 1:35-51 (NKJV)</span>
+                <p><span class="verse-num">35</span> Again, the next day, John stood with two of his disciples.</p>
+                <p><span class="verse-num">36</span> And looking at Jesus as He walked, he said, "Behold the Lamb of God!"</p>
+                <p><span class="verse-num">37</span> The two disciples heard him speak, and they followed Jesus.</p>
+                <p><span class="verse-num">38</span> Then Jesus turned, and seeing them following, said to them, "What do you seek?" They said to Him, "Rabbi" (which is to say, when translated, Teacher), "where are You staying?"</p>
+                <p><span class="verse-num">39</span> He said to them, "Come and see." They came and saw where He was staying, and remained with Him that day (now it was about the tenth hour).</p>
+                <p><span class="verse-num">40</span> One of the two who heard John speak, and followed Him, was Andrew, Simon Peter's brother.</p>
+                <p><span class="verse-num">41</span> He first found his own brother Simon, and said to him, "We have found the Messiah" (which is translated, the Christ).</p>
+                <p><span class="verse-num">42</span> And he brought him to Jesus. Now when Jesus looked at him, He said, "You are Simon the son of Jonah. You shall be called Cephas" (which is translated, A Stone).</p>
+                <p><span class="verse-num">43</span> The following day Jesus wanted to go to Galilee, and He found Philip and said to him, "Follow Me."</p>
+                <p><span class="verse-num">44</span> Now Philip was from Bethsaida, the city of Andrew and Peter.</p>
+                <p><span class="verse-num">45</span> Philip found Nathanael and said to him, "We have found Him of whom Moses in the law, and also the prophets, wrote&mdash;Jesus of Nazareth, the son of Joseph."</p>
+                <p><span class="verse-num">46</span> And Nathanael said to him, "Can anything good come out of Nazareth?" Philip said to him, "Come and see."</p>
+                <p><span class="verse-num">47</span> Jesus saw Nathanael coming toward Him, and said of him, "Behold, an Israelite indeed, in whom is no deceit!"</p>
+                <p><span class="verse-num">48</span> Nathanael said to Him, "How do You know me?" Jesus answered and said to him, "Before Philip called you, when you were under the fig tree, I saw you."</p>
+                <p><span class="verse-num">49</span> Nathanael answered and said to Him, "Rabbi, You are the Son of God! You are the King of Israel!"</p>
+                <p><span class="verse-num">50</span> Jesus answered and said to him, "Because I said to you, 'I saw you under the fig tree,' do you believe? You will see greater things than these."</p>
+                <p><span class="verse-num">51</span> And He said to him, "Most assuredly, I say to you, hereafter you shall see heaven open, and the angels of God ascending and descending upon the Son of Man."</p>
+            </div>
+        </div>
+
+        <h2 id="purpose">Purpose</h2>
+        <p>Learn directly from the Scriptures how to reach individuals with the gospel.</p>
+        <ul>
+            <li>If we can do it one-on-one successfully, then other forms of outreach and evangelism become a bonus.</li>
+            <li>There are biblical examples that mirror our real-life experiences today.</li>
+        </ul>
+
+        <h2 id="why-succeed">Why We Will Succeed</h2>
+        <ul>
+            <li><strong>Jesus commanded us to go.</strong> The Great Commission is His command, not a suggestion. <span class="ref-tag">Mark 16:15-18</span></li>
+            <li><strong>We are designed to believe in something higher than ourselves.</strong> It is our default setting &mdash; it is why people believe one thing or another. In fact, believing in nothing is itself a belief.</li>
+            <li><strong>There is always someone ready.</strong> There is always a <span class="ripe-fruit">ripe fruit</span> waiting on you to lead them to Christ. <span class="ref-tag">John 4:35</span></li>
+            <li><strong>The word of God will grow and win.</strong> <span class="ref-tag">Acts 19:20</span></li>
+            <li><strong>Those appointed to salvation will hear and be saved.</strong> <span class="ref-tag">Acts 13:48</span></li>
+        </ul>
+
+        <p class="section-label">The Texts Behind Our Confidence</p>
+
+        <div class="scripture">
+            <span class="scripture-ref">Mark 16:15-18 (NKJV)</span>
+            <p><span class="verse-num">15</span> And He said to them, "Go into all the world and preach the gospel to every creature.</p>
+            <p><span class="verse-num">16</span> He who believes and is baptized will be saved; but he who does not believe will be condemned.</p>
+            <p><span class="verse-num">17</span> And these signs will follow those who believe: In My name they will cast out demons; they will speak with new tongues;</p>
+            <p><span class="verse-num">18</span> they will take up serpents; and if they drink anything deadly, it will by no means hurt them; they will lay hands on the sick, and they will recover."</p>
+        </div>
+
+        <div class="scripture">
+            <span class="scripture-ref">John 4:35 (NKJV)</span>
+            <p>"Do you not say, 'There are still four months and then comes the harvest'? Behold, I say to you, lift up your eyes and look at the fields, for they are already <span class="highlight-text">white for harvest!</span>"</p>
+        </div>
+
+        <div class="scripture">
+            <span class="scripture-ref">Acts 19:20 (NKJV)</span>
+            <p>"So the word of the Lord grew mightily and prevailed."</p>
+        </div>
+
+        <div class="scripture">
+            <span class="scripture-ref">Acts 13:48 (NKJV)</span>
+            <p>"Now when the Gentiles heard this, they were glad and glorified the word of the Lord. And <span class="highlight-text">as many as had been appointed to eternal life believed.</span>"</p>
+        </div>
+
+        <h2 id="goal">Goal</h2>
+        <ul>
+            <li>Focus on the personal evangelism and outreach examples.</li>
+            <li>Become proficient through practice.</li>
+            <li>Practicing what we believe will make us congregationally effective in other forms of outreach.</li>
+            <li>Each one of us becomes a personal evangelist.</li>
+        </ul>
+
+        <h2 id="examples">Scripture Examples</h2>
+        <p>There are people like these all around us, and we will find them by the grace of God &mdash; and they will be ready. Our text above is the first example: <strong>Andrew and Philip</strong>, who found Peter and Nathanael and brought them to Jesus.</p>
+
+        <h3>Andrew and Philip</h3>
+        <p><span class="ref-tag">John 1:40-51</span> &mdash; Ordinary disciples who immediately went and brought their own brother and friend to Jesus. The model of one-on-one personal evangelism.</p>
+
+        <h3>Lydia</h3>
+        <p><span class="ref-tag">Acts 16:13-15</span> &mdash; A businesswoman at the place of prayer whose heart the Lord opened to heed the things spoken by Paul.</p>
+
+        <h3>The Eunuch from Ethiopia</h3>
+        <p><span class="ref-tag">Acts 8:26-40</span> &mdash; A seeker already reading the Scriptures, to whom Philip was sent to explain the gospel and baptize.</p>
+
+        <h3>Nicodemus</h3>
+        <p><span class="ref-tag">John 3:1-21</span> &mdash; A respected religious leader who came to Jesus by night with honest questions and heard the call to be born again.</p>
+
+        <h3>Cornelius</h3>
+        <p><span class="ref-tag">Acts 10:1-48</span> &mdash; A devout Gentile whom God had already prepared, and to whom Peter was sent so his whole household could hear and believe.</p>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Have you identified a Nicodemus, a Cornelius, the Eunuch, or a Lydia in your own life?</p>
+        <p>Will you be an Andrew and a Philip &mdash; the one who takes hold of Peter and Nathanael and brings them to Jesus?</p>
+
+        <div class="next-session">
+            <p class="section-label">Session 2</p>
+            <p>"How to Win a Soul to Jesus" &mdash; Practice</p>
+        </div>
+    </div>
+</body>
+</html>
