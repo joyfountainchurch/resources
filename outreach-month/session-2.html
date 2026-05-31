@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outreach Month Training - Session 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: #fafafa;
+            color: #2c2c2c;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 40px 100px;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 0 60px;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 70px;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            font-weight: normal;
+            margin-bottom: 0.3em;
+            color: #1a1a1a;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.75em;
+            color: #666;
+        }
+
+        h2 {
+            font-size: 2.4em;
+            font-weight: normal;
+            margin: 70px 0 30px;
+            color: #333;
+            line-height: 1.3;
+            padding-top: 40px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        h3 {
+            font-size: 1.75em;
+            font-weight: normal;
+            margin: 50px 0 20px;
+            color: #444;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        p {
+            font-size: 1.44em;
+            line-height: 1.9;
+            margin-bottom: 1.3em;
+            color: #3a3a3a;
+        }
+
+        .scripture {
+            font-style: italic;
+            background: linear-gradient(135deg, #f5f5f5 0%, #ececec 100%);
+            padding: 35px 40px;
+            border-left: 4px solid #8b7355;
+            margin: 35px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .scripture p {
+            font-size: 1.375em;
+            line-height: 2;
+            margin-bottom: 1.1em;
+        }
+
+        .scripture p:last-child {
+            margin-bottom: 0;
+        }
+
+        .scripture-ref {
+            font-style: normal;
+            font-weight: bold;
+            color: #6b5344;
+            display: block;
+            margin-bottom: 12px;
+            font-size: 1.3em;
+        }
+
+        .verse-num {
+            font-weight: bold;
+            color: #8b7355;
+            font-style: normal;
+            margin-right: 3px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 30px 0;
+        }
+
+        ul li {
+            font-size: 1.44em;
+            line-height: 1.8;
+            margin-bottom: 0.9em;
+            padding-left: 28px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "\2022";
+            color: #8b7355;
+            font-size: 1.2em;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        ol.steps {
+            list-style: none;
+            counter-reset: steps-counter;
+            padding-left: 0;
+            margin: 30px 0;
+        }
+
+        ol.steps li {
+            font-size: 1.44em;
+            line-height: 1.8;
+            margin-bottom: 1.1em;
+            padding-left: 54px;
+            position: relative;
+            counter-increment: steps-counter;
+        }
+
+        ol.steps li::before {
+            content: counter(steps-counter);
+            color: white;
+            background: #8b7355;
+            font-size: 0.85em;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-style: normal;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 0;
+            top: 4px;
+        }
+
+        .section-label {
+            font-size: 1.19em;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #8b7355;
+            margin-bottom: 0.8em;
+        }
+
+        .ref-tag {
+            font-style: normal;
+            font-weight: bold;
+            color: #6b5344;
+            white-space: nowrap;
+        }
+
+        .toc {
+            margin-bottom: 60px;
+        }
+
+        .toc h2 {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+
+        .toc ol {
+            padding-left: 24px;
+            margin: 20px 0;
+        }
+
+        .toc ol li {
+            font-size: 1.25em;
+            line-height: 1.7;
+            margin-bottom: 0.5em;
+            color: #3a3a3a;
+        }
+
+        .toc ol li::before {
+            display: none;
+        }
+
+        .toc ol li a {
+            color: #6b5344;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .toc ol li a:hover {
+            color: #8b7355;
+            text-decoration: underline;
+        }
+
+        .anchor-scripture {
+            padding: 10px 0 40px;
+            margin-bottom: 60px;
+        }
+
+        .anchor-scripture .section-label {
+            text-align: center;
+        }
+
+        .highlight-text {
+            font-weight: bold;
+        }
+
+        .indisputable {
+            background: linear-gradient(135deg, #f9f5f0 0%, #f1ebe3 100%);
+            border: 1px solid #d4c4b0;
+            border-radius: 8px;
+            padding: 40px 44px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .indisputable p {
+            font-size: 1.5em;
+            line-height: 1.75;
+            color: #3a2e24;
+            margin-bottom: 0.6em;
+        }
+
+        .indisputable p:last-child {
+            margin-bottom: 0;
+        }
+
+        .indisputable .ref-tag {
+            font-size: 1.1em;
+        }
+
+        .prayer-block {
+            background: linear-gradient(135deg, #f9f5f0 0%, #f1ebe3 100%);
+            border: 1px solid #d4c4b0;
+            border-left: 4px solid #8b7355;
+            border-radius: 0 8px 8px 0;
+            padding: 40px 44px;
+            margin: 40px 0;
+        }
+
+        .prayer-block p {
+            font-size: 1.44em;
+            line-height: 2;
+            font-style: italic;
+            color: #3a2e24;
+            margin-bottom: 0;
+        }
+
+        .prayer-label {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #8b7355;
+            margin-bottom: 18px;
+            font-style: normal;
+            display: block;
+        }
+
+        .resource-link {
+            margin: 50px 0 20px;
+            padding: 30px 36px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .resource-link p {
+            font-size: 1.25em;
+            margin-bottom: 0.5em;
+            color: #555;
+        }
+
+        .resource-link a {
+            font-size: 1.19em;
+            color: #6b5344;
+            word-break: break-word;
+        }
+
+        .resource-link a:hover {
+            color: #8b7355;
+        }
+
+        .prev-session {
+            text-align: center;
+            padding: 50px 0 20px;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 60px;
+        }
+
+        .prev-session p {
+            font-size: 1.5em;
+            color: #555;
+        }
+
+        .prev-session a {
+            color: #6b5344;
+            text-decoration: none;
+        }
+
+        .prev-session a:hover {
+            color: #8b7355;
+            text-decoration: underline;
+        }
+
+        .nav-links {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.9em;
+            display: flex;
+            gap: 8px;
+        }
+
+        .nav-links a {
+            color: #8b7355;
+            text-decoration: none;
+            padding: 10px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: background 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 0;
+        }
+
+        .nav-links a:hover {
+            background: #f5f5f5;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 24px 80px;
+            }
+
+            header {
+                padding: 50px 0 40px;
+                margin-bottom: 50px;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            h2 {
+                font-size: 1.9em;
+                margin: 50px 0 25px;
+                padding-top: 30px;
+            }
+
+            h3 {
+                margin: 40px 0 18px;
+            }
+
+            p, ul li, ol.steps li {
+                font-size: 1.25em;
+            }
+
+            .scripture {
+                padding: 25px 20px;
+                margin: 25px 0;
+            }
+
+            .scripture p {
+                font-size: 1.15em;
+            }
+
+            .indisputable {
+                padding: 28px 24px;
+            }
+
+            .indisputable p {
+                font-size: 1.3em;
+            }
+
+            .prayer-block {
+                padding: 28px 24px;
+            }
+
+            .prayer-block p {
+                font-size: 1.25em;
+            }
+
+            .nav-links {
+                position: static;
+                text-align: center;
+                justify-content: center;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-links">
+        <a href="session-1.html" title="Session 1: Theology">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </a>
+        <a href="../" title="Resources Home">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </a>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Outreach Month Training</h1>
+            <p class="subtitle">Session 2: How to Win a Soul to Jesus &mdash; Practice</p>
+        </header>
+
+        <p>With the theology in view, it is time to put it into practice. This session covers the how &mdash; how to overcome the obstacles, how to start the conversation, and how to lead a person step by step to a prayer of faith in Jesus Christ.</p>
+
+        <div class="anchor-scripture">
+            <p class="section-label">Our Texts</p>
+            <p style="text-align:center; font-size:1.19em; color:#666; margin-bottom:0;">Mark 16:15&ndash;17 &nbsp;&bull;&nbsp; Acts 2:36&ndash;42 &nbsp;&bull;&nbsp; Acts 8:12 &nbsp;&bull;&nbsp; Romans 10:8&ndash;11 &nbsp;&bull;&nbsp; Romans 1:16 &nbsp;&bull;&nbsp; John 3:16</p>
+        </div>
+
+        <nav class="toc">
+            <h2>Contents</h2>
+            <ol>
+                <li><a href="#obstacles">Common Obstacles</a></li>
+                <li><a href="#indisputable">The Indisputable Statement</a></li>
+                <li><a href="#gospel">What Is the Gospel?</a></li>
+                <li><a href="#pointers">Key Pointers for the Personal Evangelist</a></li>
+                <li><a href="#non-negotiables">Key Non-Negotiables</a></li>
+                <li><a href="#theology-practice">Theology and Practice</a></li>
+                <li><a href="#leading">Leading a Soul to Jesus</a></li>
+                <li><a href="#prayer">Sample Prayer of Faith</a></li>
+            </ol>
+        </nav>
+
+        <h2 id="obstacles">Common Obstacles to Sharing the Gospel</h2>
+        <p>Before we can lead others, we need to honestly identify what holds us back. These are the most common obstacles:</p>
+        <ul>
+            <li>Fear of rejection</li>
+            <li>Lack of understanding</li>
+            <li>A lack of know-how</li>
+            <li>Procrastination</li>
+            <li>Culture</li>
+        </ul>
+        <p>What other obstacles do you know? Take a moment to name them &mdash; naming them is the first step to overcoming them.</p>
+
+        <h2 id="indisputable">The Indisputable Statement</h2>
+        <div class="indisputable">
+            <p>The only way for any soul to become a follower of Jesus is through believing in the gospel.</p>
+            <p><span class="ref-tag">Acts 4:12</span></p>
+        </div>
+
+        <div class="scripture">
+            <span class="scripture-ref">Acts 4:12 (NKJV)</span>
+            <p>"Nor is there salvation in any other, for there is no other name under heaven given among men by which we must be saved."</p>
+        </div>
+
+        <h2 id="gospel">What Is the Gospel?</h2>
+        <p>Paul defines it clearly in <span class="ref-tag">1 Corinthians 15:1&ndash;4</span>:</p>
+
+        <div class="scripture">
+            <span class="scripture-ref">1 Corinthians 15:1&ndash;4 (NKJV)</span>
+            <p><span class="verse-num">1</span> Moreover, brethren, I declare to you the gospel which I preached to you, which also you received and in which you stand,</p>
+            <p><span class="verse-num">2</span> by which also you are saved, if you hold fast that word which I preached to you &mdash; unless you believed in vain.</p>
+            <p><span class="verse-num">3</span> For I delivered to you first of all that which I also received: that Christ died for our sins according to the Scriptures,</p>
+            <p><span class="verse-num">4</span> and that He was buried, and that He rose again the third day according to the Scriptures.</p>
+        </div>
+
+        <p>Leading people to Jesus was never meant to be complicated. It is the power of a clear message delivered with faith.</p>
+
+        <div class="scripture">
+            <span class="scripture-ref">Romans 1:16 (NKJV)</span>
+            <p>"For I am not ashamed of the gospel of Christ, for it is <span class="highlight-text">the power of God to salvation</span> for everyone who believes, for the Jew first and also for the Greek."</p>
+        </div>
+
+        <h2 id="pointers">Key Pointers for the Personal Evangelist</h2>
+        <ul>
+            <li>First believe that it is <em>not</em> difficult.</li>
+            <li>Believe that the Father has prepared meetings with non-believers who are ready to follow Jesus &mdash; and you will find them.</li>
+            <li>Have faith in God that because Jesus said to "Go," He will be with you.</li>
+            <li>We are to do the "work of an evangelist." <span class="ref-tag">2 Timothy 4:5</span></li>
+        </ul>
+
+        <div class="scripture">
+            <span class="scripture-ref">2 Timothy 4:5 (NKJV)</span>
+            <p>"But you be watchful in all things, endure afflictions, <span class="highlight-text">do the work of an evangelist</span>, fulfill your ministry."</p>
+        </div>
+
+        <h2 id="non-negotiables">Key Non-Negotiables</h2>
+        <p>When leading a soul to Jesus, these four elements must be present:</p>
+
+        <ul>
+            <li>The candidate must <strong>hear the message of the Kingdom of God.</strong> <span class="ref-tag">Romans 10:14</span></li>
+            <li>They should <strong>confess with their mouth the Lord Jesus and believe in their hearts</strong> that God raised Him from the dead. <span class="ref-tag">Romans 10:9&ndash;13</span></li>
+            <li><strong>Repent of their sins, be baptized in water by immersion, and receive the Holy Spirit.</strong> <span class="ref-tag">Acts 2:38</span></li>
+            <li>Become a <strong>committed member of the local assembly</strong> of believers and a follower of the doctrine of Christ. <span class="ref-tag">Acts 2:42</span></li>
+        </ul>
+
+        <div class="scripture">
+            <span class="scripture-ref">Romans 10:9&ndash;13 (NKJV)</span>
+            <p><span class="verse-num">9</span> that if you confess with your mouth the Lord Jesus and believe in your heart that God has raised Him from the dead, you will be saved.</p>
+            <p><span class="verse-num">10</span> For with the heart one believes unto righteousness, and with the mouth confession is made unto salvation.</p>
+            <p><span class="verse-num">11</span> For the Scripture says, "Whoever believes on Him will not be put to shame."</p>
+            <p><span class="verse-num">12</span> For there is no distinction between Jew and Greek, for the same Lord over all is rich to all who call upon Him.</p>
+            <p><span class="verse-num">13</span> For "whoever calls on the name of the Lord shall be saved."</p>
+        </div>
+
+        <div class="scripture">
+            <span class="scripture-ref">Acts 2:38 (NKJV)</span>
+            <p>"Then Peter said to them, 'Repent, and let every one of you be baptized in the name of Jesus Christ for the remission of sins; and you shall receive the gift of the Holy Spirit.'"</p>
+        </div>
+
+        <h2 id="theology-practice">Three Distinct Things in Theology and Practice</h2>
+
+        <h3>Orthodoxy</h3>
+        <p>Right belief &mdash; what the Scripture commands.</p>
+        <p>In <span class="ref-tag">Acts 2:38</span>, Peter tells the non-believers exactly what they need to do. Three clear items emerge: <strong>Repent</strong>, <strong>Be Baptized</strong>, and <strong>Receive the Holy Spirit.</strong></p>
+
+        <h3>Orthopraxis</h3>
+        <p>Right practice &mdash; what the early church actually did.</p>
+        <p><span class="ref-tag">Acts 8:14&ndash;16</span> shows us these things in action &mdash; that the Word was received, and the Spirit was given through the laying on of hands. Orthodoxy and orthopraxis together form the full picture of what it means to bring someone into the Kingdom.</p>
+
+        <div class="scripture">
+            <span class="scripture-ref">Acts 8:14&ndash;16 (NKJV)</span>
+            <p><span class="verse-num">14</span> Now when the apostles who were at Jerusalem heard that Samaria had received the word of God, they sent Peter and John to them,</p>
+            <p><span class="verse-num">15</span> who, when they had come down, prayed for them that they might receive the Holy Spirit.</p>
+            <p><span class="verse-num">16</span> For as yet He had fallen upon none of them. They had only been baptized in the name of the Lord Jesus.</p>
+        </div>
+
+        <h2 id="leading">Leading a Soul to Jesus</h2>
+        <p>Follow these steps when you have an opportunity to lead someone to Christ:</p>
+
+        <ol class="steps">
+            <li>Ask the Lord for <strong>boldness.</strong></li>
+            <li>Pray in faith for God to <strong>open the candidate's heart.</strong></li>
+            <li>Look for an <strong>open door in conversation.</strong></li>
+            <li>Offer what you have in Jesus &mdash; <strong>share your own testimony</strong> of how He changed your life.</li>
+            <li><strong>Share the gospel</strong> clearly and simply.</li>
+            <li>Ask if they are interested in <strong>taking God's offer of salvation</strong> to become a child of God.</li>
+            <li>Lead the candidate in a <strong>prayer of faith.</strong></li>
+        </ol>
+
+        <h2 id="prayer">Sample Prayer of Faith in Jesus Christ</h2>
+        <p>When the person is ready, lead them through a prayer like this, phrase by phrase:</p>
+
+        <div class="prayer-block">
+            <span class="prayer-label">Prayer of Faith</span>
+            <p>"Heavenly Father, I come to You in the name of Jesus. I admit that I am a sinner and need Your forgiveness. I believe that Jesus died for my sins, and you raised Him up from among the dead. I ask Jesus to come into my heart and be my Lord and Savior. Thank You for saving me. Amen."</p>
+        </div>
+
+        <div class="resource-link">
+            <p class="section-label">Further Reading</p>
+            <p>A web resource you may find helpful:</p>
+            <a href="https://enjoyingthejourney.org/10-ways-to-begin-bringing-others-to-jesus/" target="_blank" rel="noopener">enjoyingthejourney.org &mdash; 10 Ways to Begin Bringing Others to Jesus</a>
+        </div>
+
+        <div class="prev-session">
+            <p class="section-label">Previous Session</p>
+            <p><a href="session-1.html">Session 1: Personal Evangelism &mdash; Theology</a></p>
+        </div>
+    </div>
+</body>
+</html>
